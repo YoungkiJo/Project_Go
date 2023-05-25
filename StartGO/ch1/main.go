@@ -1,27 +1,56 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+/* ---------------------------------------------------------- */
+// Lecture 7(포인터) 본 내용은 응용에서 많이 사용할 수 있으므로 코드 X
+
+/* ---------------------------------------------------------- */
+// Lecture 6
+func canIDrink(age int) bool {
+	// if age < 18 {
+	// 	return false
+	// } else {
+	// 	return true
+	// }
+
+	// if koreanAge := age + 2; koreanAge < 18 { // variable expression
+	// 	return false
+	// } else {
+	// 	return true
+	// }
+
+	switch age {
+	case 10:
+		return false
+	case 18:
+		return true
+	}
+	return false
+}
+
+func main() {
+	fmt.Println(canIDrink(18))
+}
 
 /* ---------------------------------------------------------- */
 // Lecture 5
 
-func supperAdd(numbers ...int) int {
-	var sum int = 0
-	// for _, number := range numbers {
-	// 	sum += (number)
-	// }
-	for i := 0; i < len(numbers); i++ {
-		sum += numbers[i]
-	}
-	return sum
-}
+// func supperAdd(numbers ...int) int {
+// 	var sum int = 0
+// 	// for _, number := range numbers {
+// 	// 	sum += (number)
+// 	// }
+// 	for i := 0; i < len(numbers); i++ {
+// 		sum += numbers[i]
+// 	}
+// 	return sum
+// }
 
-func main() {
-	total := supperAdd(1, 2, 3, 4, 5, 6)
-	fmt.Println(total)
-}
+// func main() {
+// 	total := supperAdd(1, 2, 3, 4, 5, 6)
+// 	fmt.Println(total)
+// }
 
 /* ---------------------------------------------------------- */
 // Lecture 4
