@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"githubcode/StartGO/ch3/something"
 	"net/http"
 )
 
@@ -14,6 +15,7 @@ type requestResult struct {
 var errRequestFailed = errors.New("Request failed")
 
 func main() {
+	something.SayHello()
 	var results = map[string]string{}
 	// results := make(map[string]string)
 	c := make(chan requestResult)
